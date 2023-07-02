@@ -1,0 +1,38 @@
+LOCAL_PATH := $(call my-dir)
+
+ifeq ($(TARGET_DEVICE),rk322x_box)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libjpeghwdec
+LOCAL_MODULE_OWNER := rockchip
+LOCAL_SRC_FILES := proprietary/lib/libjpeghwdec.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := librkffplayer
+LOCAL_MODULE_OWNER := rockchip
+LOCAL_SRC_FILES := proprietary/lib/librkffplayer.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := librga
+LOCAL_MODULE_OWNER := rockchip
+LOCAL_SRC_FILES := proprietary/lib/librga.so
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_PREBUILT)
+
+endif
